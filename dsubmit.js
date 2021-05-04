@@ -45,7 +45,7 @@ dSubmit.prototype.getObjs = function (objs) {
 
 dSubmit.prototype.getAllRequired = function () {
   let _ = this // this ds obj
-  let field = document.querySelectorAll(_.settings.form+' input[required]');
+  let field = document.querySelectorAll(_.settings.form + ' input[required]');
   return field;
 }; // getAllRequired
 
@@ -69,7 +69,6 @@ dSubmit.prototype.validate = function (e) {
   } else {
     _.settings.submitBtn.disabled = true;
   }
-  // console.log(_errors);
 }; // validate
 
 // This will update the settings of the ds
@@ -93,11 +92,13 @@ dSubmit.prototype.init = function (opts) {
   _.setOpts(opts);
 
   _.settings.submitBtn = document.querySelector(_.settings.form+' input[type=submit]');
-  _.settings.submitBtn.disabled = true;
 
-  _.getObjs(_.getAllRequired()).map(function (required_field) {
+  if (_.getAllRequired().length !== 0) {
+    _.settings.submitBtn.disabled = true;
+
+    _.getObjs(_.getAllRequired()).map(function (required_field) {
       _.state.requiredFieldsCollection.push(required_field.id)
       required_field.addEventListener('input',_.validate.bind(_),true)
-  });
-  // console.log(_.state.requiredFieldsCollection);
+    });
+  }
 }//init
