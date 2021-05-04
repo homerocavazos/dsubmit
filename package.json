@@ -1,0 +1,18 @@
+{
+  "name": "@js-toolbox/js-disable-submit",
+  "version": "1.0.0",
+  "description": "Javascript Disable Submit",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homerocavazos/dsubmit.git"
+  },
+  "author": "Homero Cavazos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/homerocavazos/dsubmit/issues"
+  },
+  "homepage": "https://github.com/homerocavazos/dsubmit#readme"
+}
