@@ -62,7 +62,7 @@ h2::before {
 h3 {
   font-size: 16px;
   font-weight: 600;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
   width: 100%;
   border-top: 1px lightblue solid;
 }

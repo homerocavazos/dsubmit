@@ -20,7 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
-  <script src="./dsubmit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/homerocavazos/dsubmit@main/dsubmit.min.js"
+    integrity="sha384-tTXJG0PySIO8OrbIwwM2qM9ExT+byjS3HnCif9KHb/QJjTkGFI6Cj1pwmfTuBVM5" crossorigin="anonymous"></script>
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64412307-1"></script>
 <script>
@@ -66,20 +67,24 @@
 
 </section>
 <article>
+  <h3>NPM</h3>
+  <pre>
+npm i @js-toolbox/js-disable-submit</pre>
+  <h3>CDN</h3>
+  <pre>
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/gh/homerocavazos/dsubmit@main/dsubmit.min.js&#x22;
+integrity=&#x22;sha384-tTXJG0PySIO8OrbIwwM2qM9ExT+byjS3HnCif9KHb/QJjTkGFI6Cj1pwmfTuBVM5&#x22; crossorigin=&#x22;anonymous&#x22;&#x3E;&#x3C;/script&#x3E;</pre>
   <h3>Usage</h3>
   <pre>
-    const example = new dSubmit();
-
-    example.init()
-  </pre>
+&#x3C;script&#x3E;
+  const example = new dSubmit();
+  example.init()
+&#x3C;/script&#x3E;</pre>
 </article>
-      <script>
-        const my = new dSubmit();
-
-        my.init()
-
-      </script>
-
+<script>
+  const example = new dSubmit();
+  example.init()
+</script>
 </div>
 </body>
 </html>
