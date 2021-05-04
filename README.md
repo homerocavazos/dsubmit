@@ -16,7 +16,7 @@ npm i @js-toolbox/js-disable-submit
 
 ```
 <script src="https://cdn.jsdelivr.net/gh/homerocavazos/dsubmit@main/dsubmit.min.js"
-integrity="sha384-tTXJG0PySIO8OrbIwwM2qM9ExT+byjS3HnCif9KHb/QJjTkGFI6Cj1pwmfTuBVM5" crossorigin="anonymous"></script>
+integrity="sha384-RXWyNs/55QPKPWDP2rO/L2NxsGG0WH30v3+5mdN3IWZZY3qxO0mtxriXBTONKX/4" crossorigin="anonymous"></script>
 ```
 
 ### Usage
