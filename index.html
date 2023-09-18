@@ -22,8 +22,6 @@
   <link rel="stylesheet" href="./style.css">
 
 
-  <script src="https://cdn.jsdelivr.net/gh/homerocavazos/dsubmit@main/dsubmit.min.js"
-    integrity="sha384-RXWyNs/55QPKPWDP2rO/L2NxsGG0WH30v3+5mdN3IWZZY3qxO0mtxriXBTONKX/4" crossorigin="anonymous"></script>
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64412307-1"></script>
@@ -55,16 +53,43 @@
       <label for="lname">Last name*</label><br>
       <input type="text" id="lname" name="lname" value="" required><br>
 
-      <label for="email">Email*</label><br>
-      <input type="email" id="email" name="email" value=""  required><br>
+      <label for="job_seeker_registration_email_first">Email*</label><br>
+      <input type="email" id="job_seeker_registration_email_first" name="email" value=""  required><br>
+      <label for="job_seeker_registration_email_second">Confirm Email*</label><br>
+      <input type="email" id="job_seeker_registration_email_second" name="email_second" value=""  required><br>
+      
+      <label for="job_seeker_registration_plainPassword_first">Password*</label><br>
+      <input type="password" id="job_seeker_registration_plainPassword_first" name="password" value=""  required><br>
+      <label for="job_seeker_registration_plainPassword_second">Confirm Password*</label><br>
+      <input type="password" id="job_seeker_registration_plainPassword_second" name="password_second" value=""  required><br>
 
-      <label for="phone">Phone <small>e.g. 123-456-7890</small></label><br>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+      <label for="phone">Phone* <small>e.g. 123-456-7890</small></label><br>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
+     <label for="cars">Choose a car:*</label><br>
+
+    <select name="cars" id="cars" required>
+      <option value="">Select</option>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select><br>
+
+
+  <label class="required">Work Eligibility *</label>
+  
+      <input type="radio" id="job_seeker_registration_visaSponsorshipRequired_0" name="job_seeker_registration[visaSponsorshipRequired]" required="required" novalidate="novalidate" value="eligible_to_work" checked="checked" data-gtm-form-interact-field-id="4" required>
+      <label for="job_seeker_registration_visaSponsorshipRequired_0">I am legally eligible to work in the U.S.</label>
+   
+      <input type="radio" id="job_seeker_registration_visaSponsorshipRequired_1" name="job_seeker_registration[visaSponsorshipRequired]" required="required" novalidate="novalidate" value="visa_sponsorship_required" data-gtm-form-interact-field-id="3" required>
+    
 
       <label for="company">Company</label><br>
       <input type="text" id="company" name="company" value=""><br>
 
-      <input type="submit" value="Submit">
+
+      <button type="submit" id="job_seeker_registration_submit" name="job_seeker_registration[submit]" >Register</button>
     </form>
 
 </section>
@@ -85,9 +110,18 @@ integrity=&#x22;sha384-RXWyNs/55QPKPWDP2rO/L2NxsGG0WH30v3+5mdN3IWZZY3qxO0mtxriXB
   example.init()
 &#x3C;/script&#x3E;</pre>
 </article>
+
+  <script src="./dsubmit.js"></script>
 <script>
-  const example = new dSubmit();
-  example.init()
+  const iqform = new dSubmit();
+  iqform.init({
+    email: document.querySelector('#job_seeker_registration_email_first'),
+    confirmEmail: document.querySelector('#job_seeker_registration_email_second')
+  })
+  // example.checkRequired();
+
+
+
 </script>
 </div>
 </body>

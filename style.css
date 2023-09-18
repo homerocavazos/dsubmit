@@ -147,6 +147,9 @@ form input {
   margin: 5px 0;
   border: 1px solid lightblue;
 }
+form radio {
+  width: auto;
+}
 form label {
   margin: 8px 0 0 0;
   font-size: 14px;
@@ -174,5 +177,8 @@ input[disabled] {
   }
   form input {
     width: 50%;
+  }
+  form input[type="radio"] {
+    width: auto;
   }
 }
